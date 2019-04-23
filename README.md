@@ -4,7 +4,7 @@ VAE translates to predictions.
 
 Based on synthetic data, generated via MATLAB
 
-VAE based off an existing pythong jupyter implementation.
+VAE based off an existing python jupyter implementation.
 
 RNN updates via MATLAB. 
 
