@@ -29,3 +29,10 @@ VAE.ipynb also has two additional sections for further analysis.
 The third section varies one latent direction while keeping the others constant, allowing to see how each latent variable changes final output.
 The fourth section looks at the relative performance 'cost' of moving in each direction in latent space from a fixed point, based on https://arxiv.org/pdf/1710.11379.pdf
 
+
+Overall Comments:
+
+Performance is decent. Succesfully predicts bouncing behavior of synthetic data, but by no means captures actual future path.
+
+Possible improvements include optimizing the number of latent states to include (settled on using 3 as the minimal amount that led to a viable VAE), modifying VAE architecture (pretty much just used a stock version), or using alternatives of VAE. In particular, we are interested in temporal data to make predictions on, but the regular VAE is not optimized for temporal data. Variants exist where the latents at each time point are conditioned on previous latents, which could greatly improve performance. Finally, we want the latents to be 'interpretable' for use in the RNN, rather than statistically exact. Methods such as b-VAE could further help with this.
+
